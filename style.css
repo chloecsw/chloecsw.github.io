@@ -1,83 +1,99 @@
-/* General Body Styles */
+/* Import Google Fonts for a distinct modern feel */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;500&display=swap');
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
 body {
-    /* Using a combination of professional and clean fonts */
-    font-family: 'Open Sans', sans-serif; /* A highly readable, modern sans-serif font */
-    line-height: 1.6; /* Improved line height for better readability */
-    max-width: 960px; /* Slightly wider max-width for more content space */
-    margin: 60px auto; /* Increased top/bottom margin for more breathing room */
-    padding: 0 30px; /* Increased horizontal padding for spaciousness */
-    color: #444; /* Softer dark grey for body text */
-    background-color: #FDFCEF; /* A very light, warm off-white, slightly different from #fdf6f0 */
+    font-family: 'Roboto', sans-serif; /* Clean, highly readable sans-serif for body text */
+    line-height: 1.7; /* Generous line height for improved readability */
+    max-width: 850px; /* Slightly adjusted max-width for content flow */
+    margin: 50px auto; /* Increased top/bottom margin for more visual space */
+    padding: 0 25px; /* Comfortable horizontal padding */
+    color: #4A4A4A; /* A soft, dark grey for main text, less harsh than pure black */
+    background-color: #F9F9F9; /* A very light, almost white grey background */
 }
 
 /* Headings */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Playfair Display', serif; /* A classic, elegant serif font for headings */
-    color: #2C3E50; /* A deep, rich dark blue for primary headings */
-    font-weight: 700; /* Bold headings */
-    margin-bottom: 0.8em; /* Consistent bottom margin for headings */
+    font-family: 'Poppins', sans-serif; /* Modern, geometric sans-serif for headings */
+    color: #3B5D6E; /* A sophisticated, muted blue-grey for headings */
+    font-weight: 600; /* Consistent medium-bold weight for general headings */
+    margin-bottom: 0.7em; /* Consistent bottom margin for headings */
     line-height: 1.2; /* Tighter line height for headings */
 }
 
 h1 {
-    font-size: 3.2em; /* Larger main title */
+    font-size: 3.5em; /* Larger, impactful main title */
+    color: #2F4F6A; /* A deeper shade of the heading blue-grey for the main title */
     text-align: center;
-    margin-bottom: 0.4em; /* Slightly more space below the main title */
-    color: #243547; /* Even darker shade for the main title */
+    font-weight: 700; /* Extra bold for the main title */
+    margin-bottom: 0.3em; /* Slightly less space below the main title for tighter header */
 }
 
 h2 {
-    font-size: 2.4em; /* Prominent section titles */
-    color: #34495E; /* Slightly lighter dark blue for secondary headings */
-    border-bottom: 3px solid #73A9AD; /* A calming, muted teal-blue for the underline */
-    padding-bottom: 0.4em; /* More padding below the underline */
-    margin-top: 2em; /* More space above new sections */
-    margin-bottom: 1em; /* More space below section titles */
-    text-align: left; /* Align h2 to the left for better content flow */
+    font-size: 2.5em; /* Prominent section titles */
+    color: #4A6D7C; /* Slightly lighter blue-grey for secondary headings */
+    /* Instead of a solid border, let's use a subtle box shadow or a text-shadow for a different feel */
+    /* Removed border-bottom for a cleaner look */
+    /* border-bottom: 2px solid #E08A5E; */ /* An earthy orange accent for a subtle underline */
+    padding-bottom: 0.1em; /* Minimal padding for the original border effect */
+    margin-top: 2.5em; /* More vertical space above new sections */
+    margin-bottom: 0.8em; /* Adjusted space below heading */
+    text-align: left; /* Aligned to the left for standard content flow */
+    position: relative; /* For potential pseudo-element underlines */
 }
+
+/* Alternative H2 underline (optional, if you want a subtle line without being a border) */
+/* h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #E08A5E; /* The accent color */
+    margin-top: 10px;
+    margin-left: 0;
+} */
+
 
 /* Links */
 a {
-    color: #4B9294; /* A cohesive, slightly desaturated teal-blue for links */
+    color: #D9785A; /* A warm, inviting terracotta/muted orange for links */
     text-decoration: none; /* No underline by default */
-    transition: color 0.3s ease-in-out; /* Smooth transition for hover effect */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Smooth transition for both properties */
 }
 
 a:hover {
-    color: #2D6B6D; /* Darker teal-blue on hover */
-    text-decoration: underline; /* Underline on hover for clear indication */
+    color: #B86242; /* A darker, richer version of the orange on hover */
+    text-decoration: underline; /* Standard underline on hover for clarity */
 }
 
 /* Paragraphs and Lists */
 p, ul, ol { /* Added ol for ordered lists */
-    line-height: 1.7; /* Increased line height for better readability of text blocks */
-    margin-bottom: 1em; /* Space between paragraphs and list items */
+    line-height: 1.8; /* Even more generous line height for maximum text readability */
+    margin-bottom: 1.2em; /* More space between text blocks */
 }
 
 ul {
-    list-style-type: disc; /* Standard solid disc for unordered lists */
-    padding-left: 25px; /* Slightly more padding for list items */
+    list-style-type: circle; /* Open circle for a softer list style */
+    padding-left: 28px; /* A bit more padding for list items */
 }
 
-/* Optional: Additional styles for a modern portfolio look */
-/* You can add this if you have specific sections like project cards */
-.section-title { /* A class for consistent section title styling */
-    text-align: center;
-    margin-bottom: 30px;
-    padding-bottom: 15px;
-    border-bottom: 2px solid #73A9AD;
+/* You might also want these general styles for overall visual harmony */
+section {
+    margin-bottom: 40px; /* Space between major content sections */
+    padding-top: 20px; /* Some padding at the top of each section */
 }
 
-.card { /* Example for project cards or similar elements */
-    background-color: #FFFFFF;
+/* Example for a container if you have sections with backgrounds */
+.content-section {
+    background-color: #FFFFFF; /* White background for specific content blocks */
+    padding: 30px;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-    padding: 25px;
-    margin-bottom: 25px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Very light shadow */
 }
